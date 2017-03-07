@@ -8,32 +8,19 @@
 var win = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
+var label = Ti.UI.createLabel({test:'NAPP NUKEM! Android only!'});
 win.add(label);
 win.open();
 
-// TODO: write your module tests here
-var nappnuker = require('com.kosso.nappnuker');
-Ti.API.info("module is => " + nappnuker);
 
-label.text = nappnuker.example();
-
-Ti.API.info("module exampleProp is => " + nappnuker.exampleProp);
-nappnuker.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = nappnuker.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
+var os = Titanium.Platform.osname;
+if(os==='android'){
+	// Due to attempts to resume downloads in the NappDownloadManager module and leftover files, a module has been created to clean up the .dat files 
+	// The files are stored in a private location accessible by the package (app) context. For some reason the Ti app cannot access them to delete them normally.
+	// So, this will nuke the .dat files created by any previous download session. 
+	var nappnuker = require('com.kosso.nappnuker');
+	Ti.API.info("module is => " + nappnuker);
+	nappnuker.nukeNappDownloaderData();
+	nappnuker = null;
 }
 
