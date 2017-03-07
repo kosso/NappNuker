@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 3
+architectures: armeabi-v7a x86
+description: nappnuker
+author: Kosso
+license: MIT
+copyright: 2017
+
+# these should not be edited
+name: nappnuker
+moduleid: com.kosso.nappnuker
+guid: 4a660a61-9796-480d-a690-4be666a746a3
+platform: android
+minsdk: 6.0.1.GA
