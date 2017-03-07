@@ -25,7 +25,11 @@ That's it.
 
 
 
-An [iOS version of the NappDownloadmanager](https://github.com/kosso/NappDownloadManager) has been patched with this built-in. i.e.: No resuming downloads. The iOS version will also clean up any partially/failed downloads caused by a crash/exit during a download queue. 
+An [iOS version of the NappDownloadmanager](https://github.com/kosso/NappDownloadManager/tree/nuke-at-launch) [`nuke-at-launch` branch] has been patched with this built-in. i.e.: No resuming downloads. The iOS version will also clean up any partially/failed downloads caused by a crash/exit during a download queue. 
+
+
+
+I might update this module to do the same. (ie: Read the data file queues and delete the incomplete files before trashing the data file itself.)
 
 
 
