@@ -1,5 +1,5 @@
 # NappNuker
-An Android Titanium module to nuke and leftover files and data after an aborted download queue from the [Android version of the NappDownloadManager](https://github.com/viezel/NappDownloadManager).  
+An Android Titanium module to nuke any leftover files and queue data after an aborted download queue from the [Android version of the NappDownloadManager](https://github.com/viezel/NappDownloadManager).  
 
 NB: ***This will disable the ability to resume downloads on the next launch of the app***. (Many of us do not need this ability since it can complicate things a great deal!)
 
