@@ -1,4 +1,15 @@
 # NappNuker
+
+
+### UPDATE
+
+[Updated and modified versions of NappDownloadManger for iOS and Android](https://github.com/kosso/NappDownloadManager-mod) have been created with a `cleanUp()` method which contains similar features to this module. 
+
+*Please use the new modified full version of the downloader.*
+
+-----------
+
+
 An Android Titanium module to nuke any leftover files and queue data after an aborted download queue from the [Android version of the NappDownloadManager](https://github.com/viezel/NappDownloadManager).  
 
 NB: ***This will disable the ability to resume downloads on the next launch of the app***. (Many of us do not need this ability since it can complicate things a great deal!)
